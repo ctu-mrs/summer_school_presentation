@@ -211,7 +211,7 @@
 
     \only<+>{\begin{block}{Embedded Model Predictive Control}
       \begin{center}
-        \movie[autostart]{
+        \movie[autostart,showcontrols,start=10s,duration=10s]{
           \includegraphics[width=0.8\textwidth]{fig/mmar_vojta_thumbnail.jpg}
         }{./videos/mmar_vojta.mp4}\\
         Video: \url{http://youtu.be/9Bpm4J31CgE}
@@ -226,9 +226,16 @@
     \begin{itemize}
       \item Custom and purpose-built hardware
       \item Embedded software
-      \item Results: \cite{baca2016embedded}, \cite{spurny2016complex}, \cite{saska2016auro}, \cite{chudoba2016exploration}
-      \item {\color{red} Not Scalable! Bottlenecks everywhere: Embedded programming \emph{cumbersome}, simulating is difficult, system is hard-to-maintain, connecting sensors and peripheries is limited...}
+      {\color{red} \item not Scalable! Bottlenecks everywhere
+                \item embedded programming is \emph{cumbersome}
+                \item simulating is difficult (custom-built hardware does not help)
+                \item system is hard-to-maintain
+                \item available sensors and peripheries are limited}
     \end{itemize}
+
+    \begin{block}{Publications}
+      \cite{baca2016embedded}, \cite{spurny2016complex}, \cite{saska2016auro}, \cite{chudoba2016exploration}
+    \end{block}
 
   \end{frame}
 
@@ -726,8 +733,8 @@
     \begin{block}{Real world UAV grasping a brick}
       \begin{center}
         \movie[autostart,loop]{
-          \includegraphics[width=0.9\textwidth]{./videos/brick_grasping_mbzirc_thumbnail.jpg}
-        }{./videos/brick_grasping_mbzirc.mp4}\\
+          \includegraphics[width=0.9\textwidth]{./videos/brick_grasping_desert_thumbnail.jpg}
+        }{./videos/brick_grasping_desert.mp4}\\
       \end{center}
     \end{block}
 
