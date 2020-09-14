@@ -211,7 +211,7 @@
 
     \only<+>{\begin{block}{Embedded Model Predictive Control}
       \begin{center}
-        \movie[autostart]{
+        \movie[autostart,showcontrols,start=10s,duration=10s]{
           \includegraphics[width=0.8\textwidth]{fig/mmar_vojta_thumbnail.jpg}
         }{./videos/mmar_vojta.mp4}\\
         Video: \url{http://youtu.be/9Bpm4J31CgE}
@@ -226,9 +226,16 @@
     \begin{itemize}
       \item Custom and purpose-built hardware
       \item Embedded software
-      \item Results: \cite{baca2016embedded}, \cite{spurny2016complex}, \cite{saska2016auro}, \cite{chudoba2016exploration}
-      \item {\color{red} Not Scalable! Bottlenecks everywhere: Embedded programming \emph{cumbersome}, simulating is difficult, system is hard-to-maintain, connecting sensors and peripheries is limited...}
+      {\color{red} \item not Scalable! Bottlenecks everywhere
+                \item embedded programming is \emph{cumbersome}
+                \item simulating is difficult (custom-built hardware does not help)
+                \item system is hard-to-maintain
+                \item available sensors and peripheries are limited}
     \end{itemize}
+
+    \begin{block}{Publications}
+      \cite{baca2016embedded}, \cite{spurny2016complex}, \cite{saska2016auro}, \cite{chudoba2016exploration}
+    \end{block}
 
   \end{frame}
 
@@ -726,8 +733,8 @@
     \begin{block}{Real world UAV grasping a brick}
       \begin{center}
         \movie[autostart,loop]{
-          \includegraphics[width=0.9\textwidth]{./videos/brick_grasping_mbzirc_thumbnail.jpg}
-        }{./videos/brick_grasping_mbzirc.mp4}\\
+          \includegraphics[width=0.9\textwidth]{./videos/brick_grasping_desert_thumbnail.jpg}
+        }{./videos/brick_grasping_desert.mp4}\\
       \end{center}
     \end{block}
 
@@ -805,7 +812,7 @@
   %%{ Vim -- modal, modular, modern
 
   \begin{frame}
-    \frametitle{Vim -- modal, modular, modern}
+    \frametitle{Vim -- modal, modular, modern text editor}
 
     \begin{block}{Vim in (Tmux in (Linux Terminal)}
       \begin{figure}
@@ -815,38 +822,6 @@
 
   \end{frame}
 
-  %%}
-
-  %%{ Vim -- modal, modular, modern
-
-  \begin{frame}
-    \frametitle{Vim -- modal, modular, modern}
-
-    \begin{block}{Terminal in (Vim in (Tmux in (Linux Terminal))}
-      \begin{figure}
-        \includegraphics[width=0.8\textwidth]{fig/terminal_in_vim.png}
-      \end{figure}
-    \end{block}
-
-  \end{frame}
-
-  %%}
-
-  %% | ---------------------- The simulator --------------------- |
-
-  \section{MRS simulation stack}
-
-  \subsection{Gazebo/ROS, spawn}
-
-  %%{ Gazebo/ROS simulator
-  \begin{frame}
-    \frametitle{Gazebo/ROS simulator}
-
-    \begin{figure}
-      \includegraphics[width=1.0\textwidth]{fig/gazebo.png}
-    \end{figure}
-
-  \end{frame}
   %%}
 
   %%{ Spawning drones to the simulator
@@ -995,11 +970,17 @@
   \end{frame}
   %%}
 
-  %%{ Following video
+  %%{ Video
   \begin{frame}
     \frametitle{Video of the default leader and follower approach}
 
+    \vspace{-1.5em}
 
+    \begin{center}
+      \movie[autostart,loop]{
+        \includegraphics[width=1.0\textwidth]{./videos/uvdar_leader_follower_simulation_thumbnail.jpg}
+      }{./videos/uvdar_leader_follower_simulation.mp4}\\
+    \end{center}
 
   \end{frame}
   %%}
@@ -1011,7 +992,7 @@
 
     \begin{columns}[c]
 
-      \column{0.48\textwidth} % Left column and width
+      \column{0.45\textwidth} % Left column and width
       \begin{block}{A sample map of points}
         \includegraphics[width=1.0\textwidth]{fig/mtspn_task/tsp_points.png}
       \end{block}
@@ -1092,6 +1073,19 @@
     \begin{figure}
       \includegraphics[width=0.8\textwidth]{fig/mtspn_task/tsp_dubins_sampled.png}
     \end{figure}
+
+  \end{frame}
+  %%}
+
+  %%{ Video
+  \begin{frame}
+    \frametitle{Video from simulation}
+    \begin{center}
+      \vspace{-1.5em}
+      \movie[autostart,loop]{
+        \includegraphics[width=1.0\textwidth]{./videos/mtspn_simulation_thumbnail.jpg}
+      }{./videos/mtspn_simulation.mp4}\\
+    \end{center}
 
   \end{frame}
   %%}
