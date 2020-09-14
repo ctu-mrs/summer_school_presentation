@@ -895,6 +895,39 @@
 
   %%}
 
+  %%{ System setup
+
+  \begin{frame}
+    \frametitle{System setup for assignment \#1}
+
+    \begin{block}{Leader drone}
+      \begin{itemize}
+        \item out of your control
+        \item follows a pre-planned trajectory
+        \item equipped with UV LED blinkers under each rotor
+        \item will make increasingly aggressive manoeuvres during the competition
+      \end{itemize}
+    \end{block}
+
+    \begin{block}{Follower drone}
+      \begin{itemize}
+        \item equipped with two wide-angle UV-only cameras
+        \item estimates leader relative position from camera stream only
+        \item you will provide the control commands
+      \end{itemize}
+    \end{block}
+
+    \begin{block}{Your task}
+      \begin{itemize}
+          \item periodically provide control commands to the follower
+          \item keep the leader in sight for as long as possible
+      \end{itemize}
+    \end{block}
+
+  \end{frame}
+
+  %%}
+
   %%{ Following
   \begin{frame}
     \frametitle{RVIZ visualization while following}
@@ -917,6 +950,29 @@
   \end{frame}
   %%}
 
+  %%{ Rules of competiton
+  \begin{frame}
+    \frametitle{Rules of competition}
+
+    \begin{block}{Scoring}
+      One point awarded for every 10 ms of active tracking
+      \begin{itemize}
+          \item counting starts once leader begins trajectory tracking
+          \item end when leader reaches trajectory end or the task is terminated
+      \end{itemize}
+    \end{block}
+
+    \begin{block}{Automatic task termination}
+      \begin{itemize}
+        \item leader not seen by follower cameras for $T_{max}$
+        \item invalid control command provided $N_{err}$-times in a row
+        \item no control command provided within $T_{control}$
+      \end{itemize}
+    \end{block}
+
+  \end{frame}
+  %%}
+
   %%{ Improving the default solution
   \begin{frame}
     \frametitle{Improving the default solution}
@@ -927,11 +983,13 @@
 
     \begin{block}{Potential improvements}
       \begin{itemize}
-        \item use an estimator to estimate the leaders velocity (estimator provided)
+        \item experiment with the desired relative offset and control command rate
+        \item use an estimator to estimate the leader's velocity (estimator provided)
         \item use the estimated velocity to design a better position reference
         \item use the estimated velocity to design a desired trajectory
         \item experiment with an option to control the follower with desired velocity directly
       \end{itemize}
+      A more in-depth look into the system during the practicals and seminars. Additional tips and tricks will be provided throughout the week.
     \end{block}
 
   \end{frame}
@@ -946,7 +1004,7 @@
   \end{frame}
   %%}
 
-  %%{ Seminar assignemnt #1 -- MTSPN
+  %%{ Seminar assignemnt #2-- MTSPN
 
   \begin{frame}
     \frametitle{Seminar assignment \#2 -- MTSPN}
