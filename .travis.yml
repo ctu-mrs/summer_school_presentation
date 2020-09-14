@@ -10,7 +10,7 @@ jobs:
     - stage: build
       before_install:
         - sudo apt -y update
-        - sudo apt -y install texlive-latex-base texlive-latex-extra poppler-utils imagemagick
+        - sudo apt -y install texlive-latex-base texlive-latex-extra poppler-utils imagemagick texlive-science
       script:
         - pdflatex -interaction=nonstopmode main.tex || echo "failed but whatever"
         - pdflatex -interaction=nonstopmode main.tex || echo "failed but whatever"
